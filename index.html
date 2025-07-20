@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Copilot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>🎓 Campus Copilot</h1>
+      <button id="theme-toggle">🌗 Toggle Mode</button>
+    </header>
+
+    <section id="dashboard">
+      <h2>📊 Dashboard</h2>
+      <div class="summary-cards">
+        <div class="card">Tasks: <span id="task-count">0</span></div>
+        <div class="card">Goals: <span id="goal-count">0</span></div>
+      </div>
+    </section>
+
+    <section id="planner">
+      <h2>📅 Timetable Planner</h2>
+      <input type="text" id="task-input" placeholder="Enter class/task" />
+      <button onclick="addTask()">Add</button>
+      <ul id="task-list"></ul>
+    </section>
+
+    <section id="goals">
+      <h2>🎯 Goal Tracker</h2>
+      <input type="text" id="goal-input" placeholder="Set a goal" />
+      <button onclick="addGoal()">Add Goal</button>
+      <ul id="goal-list"></ul>
+    </section>
+
+    <section id="notes">
+      <h2>📝 Notes</h2>
+      <textarea id="note-box" placeholder="Write your notes here..."></textarea>
+      <button onclick="saveNotes()">Save</button>
+    </section>
+
+    <section id="calendar">
+      <h2>🗓️ Event Calendar</h2>
+      <input type="date" id="event-date">
+      <input type="text" id="event-desc" placeholder="Event Description">
+      <button onclick="addEvent()">Add Event</button>
+      <ul id="event-list"></ul>
+    </section>
+
+    <section id="pomodoro">
+      <h2>🍅 Pomodoro Timer</h2>
+      <p id="timer">25:00</p>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
